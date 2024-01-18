@@ -1,0 +1,11 @@
+<table class="table table-striped table-bordered" border = "1"> 
+    <tr> 
+        <th>FRUIT</th> 
+        <th>TIME EATEN</th> 
+    </tr> 
+        <tr *ngFor="let info of self"> 
+        <td>{{info.food}}</td>  <td>
+            {{info.lastAte}}
+        </td> 
+    </tr>  
+</table> 

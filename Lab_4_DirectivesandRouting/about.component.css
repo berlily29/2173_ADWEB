@@ -1,0 +1,34 @@
+
+.container {
+    display: flex;
+    height: 70vh;
+    width: 100vw;
+    flex-direction: row;
+    background-color: bisque;
+    border-radius: 20px;
+    transition: 1s;
+    box-shadow: 10px 5px;
+}
+.container:hover {
+    transform: scale(1.02);
+}
+.left {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.right {
+
+    display: flex;
+    width: 50%;
+    height: 100%;
+    padding-top: 10%;
+}
+
+img {
+    border-radius: 30px;
+    height: 60%;
+    width: 60%;
+}
