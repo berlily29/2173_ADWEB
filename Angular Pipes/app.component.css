@@ -1,0 +1,17 @@
+*{
+    text-align: center;
+    color: white;
+}
+
+body {
+}
+
+h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+hr {
+    background-color: rgb(255, 255, 255);
+    height: 5px;
+}

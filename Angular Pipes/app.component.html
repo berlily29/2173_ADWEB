@@ -1,0 +1,105 @@
+
+
+<h1>Text Pipes (chained) Pipes</h1>
+<div>
+ Date with uppercase:- {{presentDate | date:'fullDate' |uppercase}} <br/>
+  Date with lowercase:- {{presentDate | date:'medium' | lowercase}} <br/>
+  Date with uppercase but shortDate:- {{presentDate | date:'shortDate' | uppercase}}
+</div>
+<hr/>
+<h1>Number  Pipes</h1>
+
+<div>
+  1st number: {{Num1 |number}} <br>
+  2nd number: {{Num2 |number}}           <br>
+  3rd number: {{Num3 |number}}           <br>
+</div>
+
+<hr/>
+<h1> DATE</h1>
+
+<!--date with pipe and a normal presentDate-->
+<div> 
+  Today's date :- {{presentDate}} 
+</div>
+<div> 
+  Today's date :- {{presentDate | date }}
+</div>
+<div> 
+  Today's date :- {{presentDate | date }}
+</div>
+
+
+<!--date with parameters-->
+
+<hr/>
+<h1> Dates with parameters</h1>
+
+<div>
+  This is a short date :- {{presentDate | date:'shortDate'}} <br/>
+  This line shows the full date :- {{presentDate | date:'fullDate'}} <br/>
+  This will show a formatted date :- {{presentDate | date: 'd/M/Y'}} <br/>
+  This indicates the hours and minutes :- {{presentDate | date:'h:mm'}} <br/>
+</div>
+
+<hr/>
+
+<h1>Async Pipe </h1>
+<div>
+  Seconds changing in Time: {{time$ | async | date:'mediumTime'}}
+</div>
+<hr/>
+
+<h1>Currency Pipe </h1>
+
+<div>
+<p> {{price | currency:'USD'}}</p>
+<p>{{price | currency:'INR'}}</p>
+<p>{{price | currency:'PHP'}}</p>
+
+</div>
+
+
+
+<hr/>
+  <h1> Decimal Pipe </h1>
+
+  <div>
+  <p> {{decimalNum1 | number}} </p>
+  <p> {{decimalNum2 | number}} </p>
+  <p> {{decimalNum3 | number}} </p>
+
+  <hr/>
+</div>
+
+      <h1>JSON PIPE </h1>
+
+      <div>
+        <p>Without JSON pipe:</p>
+        <pre>{{ object }}</pre>
+        <p>With JSON pipe:</p>
+        <pre>{{ object | json }}</pre>
+      </div>
+      <hr/>
+
+      <h1>Percent Pipe </h1>
+
+      <div>
+        <!--output '26%'-->
+        <p>A: {{ a | percent }}</p>
+    
+        <!--output '0,134.950%'-->
+        <p>B: {{ b | percent: '4.3-5' }}</p>
+    
+        <!--output '0 134,950 %'-->
+        <p>B: {{ c | percent: '3.5' }}</p>
+      </div>
+
+    <hr/>
+      <h1>Slice Pipe </h1>
+      <div>
+        <h3>Start Index:- {{Fruits |slice:2}}</h3>
+        <h4>Start and end index:- {{Fruits | slice:1:4}}</h4>
+        <h5>Negative index:- {{Fruits | slice:-2}}</h5>
+        <h6>Negative start and end index:- {{Fruits | slice:-4:-2}}</h6>
+      </div>
